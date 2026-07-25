@@ -3,7 +3,7 @@ import streamlit as st
 
 def get_gemini_response(input_text):
     payload = {"input": {'topic': input_text}}
-    response = requests.post(" http://0.0.0.0:5000/answer/invoke",json = payload)
+    response = requests.post("https://langchain-chatbot-3.onrender.com/answer/invoke",json = payload)
     response.raise_for_status()
     return response.json()["output"]["content"]
 
