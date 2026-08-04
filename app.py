@@ -23,7 +23,7 @@ app = FastAPI(
 def home():
     return {"status": "running"}
 
-prompt1 = ChatPromptTemplate.from_template("give the answer about {topic} in a 5 lines")
+prompt1 = ChatPromptTemplate.from_template("give the answer about {topic} in a 10 lines")
 
 add_routes(
     app,
