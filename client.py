@@ -7,8 +7,8 @@ def get_gemini_response(input_text):
     response.raise_for_status()
     return response.json()["output"]["content"]
 
-st.title("langchain demo with gemini")
-input_text = st.text_input("whats the problem big guy")
+st.title("simple chatbot")
+input_text = st.text_input("text what you want")
 
 if input_text:
     st.write(get_gemini_response(input_text))
