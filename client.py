@@ -4,7 +4,7 @@ import streamlit as st
 
 def get_gemini_response(input_text):
     url = "https://langchain-chatbot-3.onrender.com/answer/invoke"
-    payload = {"input": input_text} # Adjust payload key based on your API
+    payload = {"input":{"topic":input_text}}
     
     max_retries = 3
     delay = 2  # Start with a 2-second delay
