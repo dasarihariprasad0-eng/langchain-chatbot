@@ -13,7 +13,7 @@ def get_gemini_response(input_text):
         try:
             response = requests.post(url, json=payload)
             response.raise_for_status()
-            return response.json() # Or response.text depending on API output
+            return response.json()["output"]["context"]
             
         except requests.exceptions.HTTPError as e:
             if response.status_code == 429:
