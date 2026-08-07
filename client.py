@@ -29,7 +29,7 @@ def get_gemini_response(input_text):
         except requests.exceptions.RequestException as e:
             return f"An error occurred: {e}"
 
-# Streamlit UI logic
+st. title("YOUR CHATBOT 👾") 
 input_text = st.text_input("Ask something:")
 if input_text:
     result = get_gemini_response(input_text)
